@@ -1,6 +1,11 @@
 from .base import *
+import os
 
-DEBUG = False
+DEBUG =True 
+
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
-SECURE_SSL_REDIRECT = True
+# security
+SECURE_SSL_REDIRECT =False 
+SESSION_COOKIE_SECURE = False 
+CSRF_COOKIE_SECURE =False 
